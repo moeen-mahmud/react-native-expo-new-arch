@@ -1,0 +1,35 @@
+{
+  "cli": {
+    "version": ">= 9.2.0"
+  },
+  "build": {
+    "base": {
+      "node": "20.15.0",
+      "pnpm": "9.4.0",
+      "cache": {
+        "disabled": false
+      }
+    },
+    "development": {
+      "extends": "base",
+      "developmentClient": false,
+      "android": {
+        "buildType": "apk",
+        "autoIncrement": "versionCode",
+        "resourceClass": "medium"
+      },
+      "ios": {
+        "autoIncrement": "buildNumber",
+        "simulator": true,
+        "resourceClass": "large"
+      }
+    },
+    "preview": {
+      "distribution": "internal"
+    },
+    "production": {}
+  },
+  "submit": {
+    "production": {}
+  }
+}
